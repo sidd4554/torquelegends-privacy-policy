@@ -1,36 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Torque Legends - Privacy Policy</title>
-    <style>
-        body { font-family: Arial; max-width: 800px; margin: 40px auto; line-height: 1.6; }
-        h1 { color: #222; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeuroPlay Technologies</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+header {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #1e293b, #0f172a);
+}
+
+h1 {
+    margin: 0;
+    font-size: 42px;
+}
+
+p {
+    color: #cbd5e1;
+}
+
+.games {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.card {
+    background: #1e293b;
+    width: 300px;
+    border-radius: 12px;
+    padding: 20px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.4);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #2563eb;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.section {
+    padding: 60px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.privacy-box {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+footer {
+    padding: 30px;
+    background: #111827;
+    text-align: center;
+    font-size: 14px;
+    color: #94a3b8;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Privacy Policy – Torque Legends</h1>
+<header>
+    <h1>NeuroPlay Technologies</h1>
+    <p>We build immersive mobile gaming experiences.</p>
+</header>
 
-<p>Last updated: February 2026</p>
+<section class="games">
 
-<p>Torque Legends respects your privacy. This game may collect limited data required for gameplay, analytics, and advertisements.</p>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="Torque Legends">
+        <h2>Torque Legends</h2>
+        <p>High speed racing experience with realistic driving physics.</p>
+        <button class="btn" onclick="openGame('https://play.google.com/store/apps/details?id=YOUR_PACKAGE_NAME')">
+            View on Play Store
+        </button>
+    </div>
 
-<h2>Information We Collect</h2>
-<ul>
-<li>Advertising ID</li>
-<li>Device information</li>
-<li>Crash and performance data</li>
-</ul>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x180" alt="Grand Metropolis RP">
+        <h2>Grand Metropolis RP</h2>
+        <p>Open world roleplay game with real-life simulation elements.</p>
+        <button class="btn" onclick="openGame('https://play.google.com')">
+            Coming Soon
+        </button>
+    </div>
 
-<h2>Ads</h2>
-<p>This app uses Unity Ads, which may collect data to provide personalized advertisements.</p>
+</section>
 
-<h2>Data Usage</h2>
-<p>Collected data is used to improve gameplay experience and app performance.</p>
+<section class="section">
+    <h2>Torque Legends – Privacy Policy</h2>
 
-<h2>Contact</h2>
-<p>If you have any questions, contact: siddharthpal275@gmail.com</p>
+    <div class="privacy-box">
+        <p><strong>Effective Date:</strong> <span id="date"></span></p>
+
+        <p>NeuroPlay Technologies built Torque Legends as a Free-to-Play game.
+        This service is provided by NeuroPlay Technologies and is intended for use as is.</p>
+
+        <p><strong>Information Collection and Use</strong><br>
+        Torque Legends does not collect personally identifiable information directly.
+        The game may use third-party services such as Google Play Services or advertising networks,
+        which may collect limited device-related data to improve user experience.</p>
+
+        <p><strong>Ads</strong><br>
+        This game may display advertisements provided by third-party ad networks.
+        These services may collect anonymized data for ad personalization.</p>
+
+        <p><strong>Security</strong><br>
+        We value your trust and strive to use commercially acceptable means of protecting your data.
+        However, no method of transmission over the internet is 100% secure.</p>
+
+        <p><strong>Children’s Privacy</strong><br>
+        Torque Legends does not knowingly collect personal data from children under 13.</p>
+
+        <p><strong>Changes to This Policy</strong><br>
+        We may update our Privacy Policy from time to time.
+        Any changes will be posted on this page.</p>
+
+        <p><strong>Contact Us</strong><br>
+        If you have any questions or suggestions about our Privacy Policy,
+        contact us at: <br>
+        <strong>neuroplaytechnologies@gmail.com</strong>
+        </p>
+    </div>
+</section>
+
+<footer>
+    © <span id="year"></span> NeuroPlay Technologies. All rights reserved.
+</footer>
+
+<script>
+function openGame(url) {
+    window.open(url, "_blank");
+}
+
+document.getElementById("year").innerText = new Date().getFullYear();
+document.getElementById("date").innerText = new Date().toLocaleDateString();
+</script>
 
 </body>
 </html>
